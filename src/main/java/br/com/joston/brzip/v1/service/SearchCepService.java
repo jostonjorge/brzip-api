@@ -7,6 +7,10 @@ import br.com.joston.brzip.v1.provider.correios.wsdl.EnderecoERP;
 import org.springframework.stereotype.Service;
 import org.springframework.ws.soap.client.SoapFaultClientException;
 
+/**
+ * Service for search cep information
+ * @author Joston Jorge
+ * */
 @Service("SearchCepServiceV1")
 public class SearchCepService {
     public Address execute(String cep){

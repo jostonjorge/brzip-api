@@ -1,15 +1,15 @@
 package br.com.joston.brzip.v1.exception;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 
 import java.time.LocalDateTime;
-
+/**
+ * @author Joston Jorge
+ * */
 @Data
 public class ApiError {
     private String code = "";
-    private String message = "";
+    private String message;
     private String description = "";
     private LocalDateTime time;
 

@@ -1,7 +1,9 @@
 package br.com.joston.brzip.v1.domain;
 
 import lombok.Data;
-
+/**
+ * @author Joston Jorge
+ * */
 @Data
 public class Address {
     private String street = "";

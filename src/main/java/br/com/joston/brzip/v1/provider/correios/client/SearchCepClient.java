@@ -9,7 +9,10 @@ import javax.xml.bind.JAXBElement;
 import javax.xml.namespace.QName;
 
 /**
+ * Wsdl Correios client
+ * Provide a connection with Correios ws to get zip code information
  * @see <a href="https://spring.io/guides/gs/consuming-web-service/">Spring Boot consuming SOAP documentation</a>
+ * @author Joston Jorge
  * */
 public class SearchCepClient extends WebServiceGatewaySupport {
     private final static String URI = "https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl";
@@ -17,6 +20,7 @@ public class SearchCepClient extends WebServiceGatewaySupport {
     public SearchCepClient(){
         this.config();
     }
+    @SuppressWarnings("unchecked")
     public ConsultaCEPResponse execute(String cep) {
         ConsultaCEP request = new ConsultaCEP();
         request.setCep(cep);
